@@ -1,0 +1,206 @@
+body {
+    background: url(cover.jpg) center/cover fixed no-repeat;
+    color: #ffffff;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .navbar {
+    background-color: transparent;
+    background-color:gray;
+  }
+
+  .navbar-brand img {
+    margin-bottom: 2px;  
+    max-width: 200px;
+    height: auto;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ffffff !important;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 5px;
+    margin: 20px;
+  }
+
+  .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #cc1e1e;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .navbar-nav .nav-link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+  .dropdown-menu {
+    background-color: gray;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s ease-in-out; 
+    display: none; 
+  }
+
+  .nav-item:hover .dropdown-menu {
+    display: block; 
+  }
+
+  .dropdown-menu a {
+    color: #ffffff ;
+    transition: color 0.3s ease-in-out; 
+  }
+
+  .dropdown-menu a:hover {
+    color: #ff0000ad ;
+  }
+  
+  /* slider */
+
+  #carouselExampleAutoplaying {
+    width: 100%; /* Set the width of the carousel container */
+    margin: auto; /* Center the carousel */
+  }
+  
+  .carousel-inner {
+    height: 500px; /* Set the height of the carousel */
+  }
+  
+  .carousel-item img {
+     /* Ensure images cover the entire carousel item */
+    height: 100%; /* Set the height of the carousel item */
+  }
+  
+  /* footer */
+  footer {
+  background-color: gray;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.column {
+  width: 23%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
+.footer-list li {
+  list-style: none; 
+  margin-bottom: 10px;
+}
+.footer-list li {
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-list a {
+    text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-list li:hover {
+  color: #ff0000; 
+}
+
+.social-icons {
+font-size: 24px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 20px;
+}
+
+.social-icons i {
+color: white;
+margin-right: 40px;
+transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.social-icons i:hover {
+    color: #ff0000;
+    transform: scale(1.5);
+    
+}
+
+
+
+/* Media Query for screens with a maximum width of 991 pixels */
+@media only screen and (max-width: 991px) {
+  .navbar-nav .nav-link::before {
+    width: 0 !important;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .column {
+    width: 100%; /* Make columns take full width on smaller screens */
+    margin-bottom: 20px;
+    text-align: center; /* Center the content within each column */
+    padding: 0 10px; /* Optional: Add some padding to columns for better spacing */
+  }
+
+  .footer-list {
+    text-align: center; /* Center the list items within the column */
+  }
+}
+
+/* Media Query for screens with a maximum width of 1024 pixels */
+@media only screen and (max-width: 1024px) {
+  .navbar-nav .nav-link {
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .column {
+    text-align: center;
+    padding: 20px;
+  }
+
+
+}
